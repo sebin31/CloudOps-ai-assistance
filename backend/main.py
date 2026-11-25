@@ -1,4 +1,4 @@
-
+import os
 import json
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
@@ -10,9 +10,15 @@ from typing import Literal
 
 
 # Ollama configuration
-OLLAMA_URL = "http://127.0.0.1:11434/api/chat"
-MODEL = "qwen2.5:1.5b"
+OLLAMA_URL = os.getenv(
+    "OLLAMA_URL",
+    "http://127.0.0.1:11434/api/chat"
+)
 
+MODEL = os.getenv(
+    "OLLAMA_MODEL",
+    "qwen2.5:1.5b"
+)
 
 app = FastAPI(title="CloudOps AI Assistant")
 

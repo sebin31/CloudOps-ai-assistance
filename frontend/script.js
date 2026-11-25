@@ -1,5 +1,7 @@
 
-const API_URL = "http://127.0.0.1:8000/chat";
+const API_URL = window.location.port === "5500"
+    ? "http://127.0.0.1:8000/chat"
+    : "/api/chat";
 
 const chatBox = document.getElementById("chat-box");
 const chatForm = document.getElementById("chat-form");
