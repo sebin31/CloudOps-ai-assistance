@@ -1,0 +1,27 @@
+
+# Python virtual environments
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# API keys and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+
+# AI models
+models/
+*.gguf
+*.safetensors
+
+# Editor files
+.vscode/
+.idea/
+
+# Windows files
+Thumbs.db

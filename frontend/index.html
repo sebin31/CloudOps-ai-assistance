@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudOps AI Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div class="brand">
+                <div class="brand-icon">☁</div>
+
+                <div>
+                    <h2>CloudOps AI</h2>
+                    <p>AI Assistant</p>
+                </div>
+            </div>
+
+            <div class="header-status">
+                <span class="status-dot"></span>
+                Local AI
+            </div>
+
+            <button id="clear-btn" class="clear-btn">
+                + New Chat
+            </button>
+
+        </header>
+
+        <!-- Chat area -->
+        <main id="chat-box" class="chat-box" aria-live="polite">
+
+            <div class="welcome" id="welcome">
+
+                <div class="welcome-icon">☁</div>
+
+                <h1>Hello! Welcome to CloudOps AI.</h1>
+
+                <p>
+                    I'm your AI assistant. Ask me anything about
+                    cloud computing, DevOps, programming or general topics.
+                </p>
+
+                <div class="suggestions">
+
+                    <button class="suggestion"
+                            data-question="What is AWS EC2?">
+                        What is AWS EC2?
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="Explain Docker containers.">
+                        Explain Docker
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="How do I check disk usage in Linux?">
+                        Linux disk usage
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="What is DevOps?">
+                        What is DevOps?
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Message input -->
+        <form id="chat-form" class="chat-input-area">
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Message CloudOps AI..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="send-btn">
+                Send ↑
+            </button>
+
+        </form>
+
+        <footer>
+            Powered by Ollama · Qwen 2.5 1.5B
+            <br>
+            AI can make mistakes. Verify important information.
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
